@@ -2,7 +2,7 @@
  * @Author       : Primimy
  * @Date         : 2020-05-07 23:11:41
  -->
-# Windows Event Log TLS shows that _A fatal error occurred while creating a TLS client credential. The internal error state is 10013_
+# Windows Event Log TLS shows that _A fatal error occurred while creating a TLS client credential. The internal error state is 10013._
 ## Description
 1. Windows Event Log TLS shows that _A fatal error occurred while creating a TLS client credential. The internal error state is 10013_.
 2. Failed to login in Github in Visual Studio with its extension, explorer shows that _waiting for localhost_.
@@ -13,16 +13,14 @@ Use IIS Crypto to change default protool(server, client)with ___Best Prctice___ 
 ## Fix
 Use IIS Crypto to apply its best practice template.
 Modify registry.(constrst newly installed Windows registry will be more accurate)
-1. _[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]_ Delete every item in its sub keys.
-2. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319]_
-Add a value _"SchUseStrongCrypto"=dword:00000001_
-3. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.5.25000]_
-Add a value _"SchUseStrongCrypto"=dword:00000001_
-4._[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]_
-Add a value _"SchUseStrongCrypto"=dword:00000001_
+1. _[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]_
+  Delete every item in its sub keys.
+2. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319]"SchUseStrongCrypto"=dword:00000001_
+3. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.5.25000]"SchUseStrongCrypto"=dword:00000001_
+4._[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]_"SchUseStrongCrypto"=dword:00000001_
 5. Reboot.
 ## Reason
-Modification on registry of IIS Crypto will break default tendency protocol on Windows, when visit websites only supporting TLS 1.2 or above, will be failed to handshake *?* with the site.
+Modification on registry of IIS Crypto will break default tendency protocol on Windows, when visit websites only supporting TLS 1.2 or above, will be failed to (*?*)handshake with the site.
 ## Reference
 1. _https://www.smarterasp.net/support/kb/a1968/how-to-fix-error-underlying-connection-was-closed-an-unexpected-error-occurred-on.aspx_
 2. _https://stackoverflow.com/questions/2859790/the-request-was-aborted-could-not-create-ssl-tls-secure-channel_
