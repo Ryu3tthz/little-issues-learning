@@ -31,9 +31,9 @@ Modify registry.(contrast newly installed Windows registry will be more accurate
 1. _[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]_
    ​       delete every item in its sub keys.
 
-2. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\\.NETFramework\v4.0.30319]"SchUseStrongCrypto"=dword:00000001_
+2. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319]"SchUseStrongCrypto"=dword:00000001_
 
-3. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\\.NETFramework\v4.5.25000]"SchUseStrongCrypto"=dword:00000001_
+3. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.5.25000]"SchUseStrongCrypto"=dword:00000001_
 4. _[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]"SchUseStrongCrypto"=dword:00000001_
 
 Reboot.
