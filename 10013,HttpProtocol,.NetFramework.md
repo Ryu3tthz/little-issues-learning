@@ -36,11 +36,9 @@ Modify registry.(contrast newly installed Windows registry will be more accurate
 3. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\\.NETFramework\v4.5.25000]"SchUseStrongCrypto"=dword:00000001_
 4. _[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319]"SchUseStrongCrypto"=dword:00000001_
 
-<<<<<<< HEAD
+
 Uncheck the box ___USE SSL 3.0___ in the Control Panel->Internet Explorer->Internet Control Panel->Advanced Page.
 
-=======
->>>>>>> parent of 4ff47f3... Update 10013,HttpProtocol,.NetFramework.md
 Reboot.
 
 ## Reason
