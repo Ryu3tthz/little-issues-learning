@@ -34,13 +34,13 @@ Modify registry.(contrast newly installed Windows registry will be more accurate
 3. _[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\\.NETFramework\v4.5.25000]"SchUseStrongCrypto"=dword:00000001_
 4. _[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319]"SchUseStrongCrypto"=dword:00000001_
 
-Uncheck the box _USE SSL 3.0_ in the Control Panel->Internet Explorer->Internet Control Panel->Advanced Page.
+Uncheck the box ___USE SSL 3.0___ in the Control Panel->Internet Explorer->Internet Control Panel->Advanced Page.
 
 Reboot.
 
 ## Reason
 
-Modification on registry of IIS Crypto will break default tendency protocol on Windows, when visit websites only supporting TLS 1.2 or above, will be failed to (***?***)handshake with the site.
+Modification on registry of IIS Crypto will break default tendency protocol on Windows, when visit websites only supporting TLS 1.2 or above, will be failed to (***?***) handshake with the site.
 
 Some softwares in China like ICBC control software for logining in its websites will recheck this to make it occurs again so it is worth to uninstall it or use other measures to solve this earlier.
 
